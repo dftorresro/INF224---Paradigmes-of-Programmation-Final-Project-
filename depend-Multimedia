@@ -1,2 +1,5 @@
-Multimedia.o: Multimedia.cpp Multimedia.h
-main.o: main.cpp Multimedia.h
+-Wall
+-g
+-MM
+Multimedia.cpp
+main.cpp

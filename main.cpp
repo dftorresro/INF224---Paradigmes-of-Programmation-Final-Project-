@@ -1,4 +1,4 @@
-//
+// Author: Daniel Felipe Torres Robles
 // main.cpp
 // Created on 21/10/2018
 //
