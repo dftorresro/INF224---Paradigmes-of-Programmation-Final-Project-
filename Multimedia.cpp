@@ -7,6 +7,8 @@
 #include <string>
 #include <iostream>
 
+using namespace std; // Using the std namespace to avoid having to write "std::" before standard library types and functions.
+
 /**
  * Constructor.
  * @param name Name of the multimedia object.
@@ -24,26 +26,26 @@ Multimedia::~Multimedia() {}
  * Getter for name.
  * @return The name of the multimedia object.
  */
-std::string Multimedia::getName() const {return name;}
+string Multimedia::getName() const {return name;}
 
 /**
  * Getter for file path.
  * @return The file path of the multimedia object.
  */
-std::string Multimedia::getFilePath() const {return filePath;}
+string Multimedia::getFilePath() const {return filePath;}
 
 /**
  * Display the multimedia object.
  */
 void Multimedia::display() const {
-    std::cout << "Name: " << name << "\nFile Path: " << filePath << std::endl;
+    cout << "Name: " << name << "\nFile Path: " << filePath << std::endl;
 }
 
 /**
  * Play the multimedia object.
  */
 void Multimedia::play() const {
-    std::cout << "Playing " << filePath << std::endl;
+    cout << "Playing " << filePath << std::endl;
 }
 
 

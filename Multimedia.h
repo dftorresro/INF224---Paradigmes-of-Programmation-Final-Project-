@@ -9,6 +9,9 @@
 #include <string>
 #include <iostream>
 
+using namespace std; // Using the std namespace to avoid having to write "std::" before standard library types and functions.
+
+
 /**
  * @class Multimedia
  * @brief A class for storing multimedia object information.
@@ -16,8 +19,8 @@
  */
 class Multimedia {
 private:
-    std::string name;     ///< Name of the multimedia object.
-    std::string filePath; ///< File path of the multimedia object.
+    string name;     ///< Name of the multimedia object.
+    string filePath; ///< File path of the multimedia object.
 
 public:
 
@@ -37,13 +40,13 @@ public:
      * @brief Get the name of the multimedia object.
      * @return The name of the object.
      */
-    std::string getName() const;
+    string getName() const;
 
     /**
      * @brief Get the file path of the multimedia object.
      * @return The file path of the object.
      */
-    std::string getFilePath() const;
+    string getFilePath() const;
 
     /**
      * @brief Set the name of the multimedia object.

@@ -24,37 +24,29 @@ public:
      * @param filePath File path of the video.
      * @param duration Duration of the video in seconds.
      */
-    Video(const std::string& name, const std::string& filePath, long duration):
-        Multimedia(name, filePath), duration(duration) {}
+    Video(const string& name, const string& filePath, long duration);
 
     /**
      * @return The duration of the video in seconds.
      */
-    long getDuration() const {return duration;}
+    double getDuration() const;
 
     /**
      * Set the duration of the video.
      * @param duration The new duration in seconds.
      */
-    void setDuration(long newduration) {duration = newduration;}
+    void setDuration(long newduration);
 
     /**
      * Display the video using the parameter "duration".
      */
-    void display() const override{
-        
-        std::cout << "Video Name: " << getName() << std::endl;
-        std::cout << "File Path: " << getFilePath() << std::endl;
-        std::cout << "Duration: " << getDuration() << " seconds" << std::endl;
-    }
+    void display() const override;
        
     /**
      * Play the video.
      */
-    void play() const override {
-    std::string command = "start " + getFilePath();
-    system(command.data());
-}
+    void play() const override;
+
 };
 
 #endif // VIDEO_H

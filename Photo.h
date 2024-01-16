@@ -28,49 +28,39 @@ public:
      * @param latitude Latitude of the photo.
      * @param longitude Longitude of the photo.
      */
-    Photo(const std::string& name, const std::string& filePath, double latitude, double longitude):
-        Multimedia(name, filePath), latitude(latitude), longitude(longitude) {}
+    Photo(const string& name, const string& filePath, double latitude, double longitude);
 
     /**
      * @return The latitude of the photo.
      */
-    double getLatitude() const{ return latitude; }
+    double getLatitude() const;
 
     /**
      * Set the latitude of the photo.
      * @param latitude The new latitude.
      */
-    void setLatitude(double newlatitude) {latitude = newlatitude;}
+    void setLatitude(double newlatitude);
 
     /**
      * @return The longitude of the photo.
      */
-    double getLongitude() const {return longitude;}
+    double getLongitude() const;
 
     /**
      * Set the longitude of the photo.
      * @param longitude The new longitude.
      */
-    void setLongitude(double newlongitude) {longitude = newlongitude;}
+    void setLongitude(double newlongitude);
 
     /**
      * Display the photo using the parameters "latitude" and "longitude".
      */
-    void display() const override{
-
-        std::cout << "Photo Name: " << getName() << std::endl;
-        std::cout << "File Path: " << getFilePath() << std::endl;
-        std::cout << "Latitude: " << getLatitude() << std::endl;
-        std::cout << "Longitude: " << getLongitude() << std::endl;
-    }
+    void display() const override;
 
     /**
      * Play the photo.
      */
-    void play() const override {
-    std::string command = "start " + getFilePath();
-    system(command.data());
-    }
+    void play() const override;
 };
 
 #endif // PHOTO_H
