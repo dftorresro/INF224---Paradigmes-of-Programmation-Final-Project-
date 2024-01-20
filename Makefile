@@ -9,12 +9,12 @@
 #
 # Nom du programme
 #
-PROG = MultimediaProject
+PROG = Multimedia
 
 #
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-SOURCES = Video.cpp Photo.cpp Multimedia.cpp main.cpp
+SOURCES = Multimedia.cpp main.cpp Photo.cpp Video.cpp Film.cpp
 
 #
 # Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)
