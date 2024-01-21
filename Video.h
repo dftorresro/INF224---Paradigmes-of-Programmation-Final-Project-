@@ -27,6 +27,12 @@ public:
     Video(const string& name, const string& filePath, long duration);
 
     /**
+     * Copy constructor.
+     * @param other The video to copy.
+     */
+    Video(const Video& other);
+
+    /**
      * @return The duration of the video in seconds.
      */
     double getDuration() const;

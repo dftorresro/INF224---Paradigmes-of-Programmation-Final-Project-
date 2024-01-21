@@ -18,6 +18,13 @@ Multimedia::Multimedia(const std::string& name, const std::string& filePath)
     : name(name), filePath(filePath) {}
 
 /**
+ * Copy constructor.
+ * @param other The multimedia object to copy.
+ */
+Multimedia::Multimedia(const Multimedia& other) 
+    : name(other.name), filePath(other.filePath) {}
+
+/**
  * Destructor.
  */
 Multimedia::~Multimedia() {}

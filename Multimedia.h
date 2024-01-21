@@ -32,6 +32,12 @@ public:
     Multimedia(const std::string& name, const std::string& filePath);
 
     /**
+     * @brief Copy constructor.
+     * @param other The multimedia object to copy.
+     */
+    Multimedia(const Multimedia& other);
+
+    /**
      * @brief Destructor.
      */
     virtual ~Multimedia();

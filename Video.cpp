@@ -5,6 +5,10 @@
 Video::Video(const std::string& name, const std::string& filePath, long duration)
     : Multimedia(name, filePath), duration(duration) {}
 
+// Copy Constructor
+Video::Video(const Video& other)
+    : Multimedia(other), duration(other.duration) {}
+
 // Getter for duration
 double Video::getDuration() const {
     return duration;
