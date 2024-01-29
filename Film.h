@@ -1,3 +1,6 @@
+#ifndef FILM_H
+#define FILM_H
+
 #include "Video.h"
 #include <string>
 
@@ -28,3 +31,6 @@ public:
 
     void display() const override;
 };
+
+
+#endif // FILM_H
