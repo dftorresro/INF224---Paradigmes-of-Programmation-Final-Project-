@@ -20,13 +20,13 @@ void Video::setDuration(long newDuration) {
 }
 
 // Overridden display function
-void Video::display() const {
-    Multimedia::display();
-    std::cout << "Duration: " << getDuration() << " seconds" << std::endl;
+std::string Video::display() const {
+    std::string baseInfo = Multimedia::display() + " Duration: " + std::to_string(duration) + " seconds";
+    return baseInfo;
 }
 
 // Overridden play function
 void Video::play() const {
-    std::string command = "start " + getFilePath();
+    std::string command = "mpv \"" + getFilePath() + "\"";
     system(command.data());
 }

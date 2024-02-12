@@ -46,7 +46,7 @@ public:
     /**
      * Display the video using the parameter "duration".
      */
-    void display() const override;
+    std::string display() const override;
        
     /**
      * Play the video.

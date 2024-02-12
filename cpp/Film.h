@@ -29,7 +29,7 @@ public:
 
     int getNumberOfChapters() const;
 
-    void display() const override;
+    std::string display() const override;
 };
 
 

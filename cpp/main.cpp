@@ -2,8 +2,11 @@
 // Last Update: 16/01/2024
 // main.cpp 
 //
-#include <iostream>
+
 #include <memory>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #include "Multimedia.h"
 #include "Photo.h"
@@ -12,9 +15,9 @@
 #include "Group.h"
 #include "MediaManager.h"
 
-using namespace std; // Using the std namespace to avoid having to write "std::" before standard library types and functions.
+//using namespace std; // Using the std namespace to avoid having to write "std::" before standard library types and functions.
 
-int main(int argc, const char* argv[]) {
+int main() {
 
     // POINT 5 ---------------------------------------------------------------
 
@@ -176,50 +179,27 @@ int main(int argc, const char* argv[]) {
 
     MediaManager manager;
 
-    // Initialize chapter durations
-    int chapters[3] = {10, 20, 30};
+    int* chapters = new int[3]{10, 20, 30};
 
-    // Use MediaManager to create multimedia objects
-    auto photo1 = manager.createPhoto("Photo1", "chess.jpg", 40.7128, 74.0060);
-    auto video1 = manager.createVideo("Video1", "videonochess.mkv", 60);
-    auto film1 = manager.createFilm("Film1", "videonochess.mkv", 60, chapters, 3);
+    auto photo1 = manager.createPhoto("Photo1", "chess.jpg", 1.0, 1.0);
+    auto photo2 = manager.createPhoto("Photo2", "chess.jpg", 2.0, 2.0);
+    auto video = manager.createVideo("Video", "videonochess.mkv", 120);
+    auto film = manager.createFilm("Film", "videonochess.mkv", 120, chapters, 3);
 
-    // Use MediaManager to create groups
-    auto groupP = manager.createGroup("Photo Group");
-    auto groupV = manager.createGroup("Video Group");
-    auto groupF = manager.createGroup("Film Group");
-    auto groupM = manager.createGroup("Multimedia Group");
+    auto group1 = manager.createGroup("Group 1");
+    group1->push_back(photo1);
+    group1->push_back(photo2);
 
-    // Add objects to groups using MediaManager
-    groupM->push_back(photo1);
-    groupM->push_back(video1);
-    groupM->push_back(film1);
+    auto group2 = manager.createGroup("Group 2");
+    group2->push_back(video);
+    group2->push_back(film);
 
-    groupP->push_back(photo1);
-    groupV->push_back(video1);
-    groupF->push_back(film1);
-
-    // Display group contents
-    std::cout << "Multimedia Group Contents:\n";
-    groupM->display();
-
-    std::cout << "\nPhoto Group Contents:\n";
-    groupP->display();
-
-    std::cout << "\nVideo Group Contents:\n";
-    groupV->display();
-
-    std::cout << "\nFilm Group Contents:\n";
-    groupF->display();
-
-    // Play a multimedia object
-    manager.playMedia("Photo1");
-
-    // Remove a multimedia object
-    manager.removeMedia("Photo1");
-
-    // Remove a group
-    manager.removeGroup("Photo Group");
+    // Test the display methods
+    photo1->play();
+    video->play();
+    film->play();
+    group1->display();
+    group2->display();
 
     return 0;
 }

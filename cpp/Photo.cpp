@@ -31,14 +31,13 @@ double Photo::getLongitude() const {
 }
 
 // Overridden display function
-void Photo::display() const {
-    Multimedia::display();
-    std::cout << "Latitude: " << getLatitude() << std::endl;
-    std::cout << "Longitude: " << getLongitude() << std::endl;
+std::string Photo::display() const {
+    std::string baseInfo = Multimedia::display() + " Latitude: " + std::to_string(latitude) + ", " + "Longitude: " + std::to_string(longitude);
+    return baseInfo;
 }
 
 // Overridden play function
 void Photo::play() const {
-    std::string command = "start " + getFilePath();
+    std::string command = "imagej \"" + getFilePath() + "\"";
     system(command.data());
 }

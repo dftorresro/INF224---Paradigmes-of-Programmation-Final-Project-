@@ -44,8 +44,9 @@ string Multimedia::getFilePath() const {return filePath;}
 /**
  * Display the multimedia object.
  */
-void Multimedia::display() const {
-    cout << "Name: " << name << "\nFile Path: " << filePath << std::endl;
+std::string Multimedia::display() const {
+    std::string info = "Name: " + name + ", File Path: " + filePath;
+    return info;
 }
 
 /**

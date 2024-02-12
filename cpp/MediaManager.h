@@ -29,7 +29,7 @@ public:
     std::shared_ptr<Group<Multimedia>> createGroup(const std::string& name);
 
     // Display the attributes of a multimedia object
-    void displayMedia(const std::string& name) const;
+    std::string displayMedia(const std::string& name) const;
 
     // Play a multimedia object
     void playMedia(const std::string& name) const;

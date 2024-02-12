@@ -55,7 +55,7 @@ public:
     /**
      * Display the photo using the parameters "latitude" and "longitude".
      */
-    void display() const override;
+    std::string display() const override;
 
     /**
      * Play the photo.

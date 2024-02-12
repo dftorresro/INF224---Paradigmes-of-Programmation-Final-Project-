@@ -28,12 +28,12 @@ std::shared_ptr<Group<Multimedia>> MediaManager::createGroup(const std::string& 
 }
 
 // Display the attributes of a multimedia object
-void MediaManager::displayMedia(const std::string& name) const {
+std::string MediaManager::displayMedia(const std::string& name) const {
     auto it = multimediaTable.find(name);
     if (it != multimediaTable.end()) {
-        it->second->display();
+        return it->second->display();
     } else {
-        std::cout << "Media not found: " << name << std::endl;
+        return "Media not found";
     }
 }
 

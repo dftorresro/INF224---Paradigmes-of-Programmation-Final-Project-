@@ -51,13 +51,12 @@ int Film::getNumberOfChapters() const {
     return numberOfChapters;
 }
 
-void Film::display() const {
-    Video::display();
-    std::cout << "Chapters: ";
+std::string Film::display() const {
+    std::string baseInfo = Video::display();
+    std::string info = baseInfo + "Chapters: ";
 
     for (int i = 0; i < numberOfChapters; i++) {
-        std::cout << chapterDurations[i] << " ";
+        std::string info = info + std::to_string(chapterDurations[i]) + " ";
     }
-
-    std::cout << std::endl;
+    return info;
 }

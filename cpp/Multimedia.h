@@ -69,7 +69,7 @@ public:
     /**
      * @brief Display the multimedia object information.
      */
-    virtual void display() const;
+    virtual std::string display() const;
 
     /**
      * @brief Play the multimedia object.
