@@ -23,10 +23,10 @@ int main() {
 
     // // Table with some Multimedia objects
     // Multimedia* table[4];
-    // table[0] = new Photo("Photo1", "chess.jpg", 40.7128, 74.0060);
-    // table[1] = new Video("Video1", "videonochess.mkv", 60);
-    // table[2] = new Photo("Photo2", "chess.jpg", 40.7128, 74.0060);
-    // table[3] = new Video("Video2", "videonochess.mkv", 60);
+    // table[0] = new Photo("Photo1", "Photo.jpg", 40.7128, 74.0060);
+    // table[1] = new Video("Video1", "Video.mp4", 60);
+    // table[2] = new Photo("Photo2", "Photo.jpg", 40.7128, 74.0060);
+    // table[3] = new Video("Video2", "Video.mp4", 60);
 
     // // Playing and displaying the multimedia objects
     // for (int i = 0; i < 4; i++) {
@@ -44,7 +44,7 @@ int main() {
 
     // POINT 7 ---------------------------------------------------------------
 
-    // // Film* film = new Film("Film1", "videonochess.mkv", 60, chapters, 3);
+    // // Film* film = new Film("Film1", "Video.mp4", 60, chapters, 3);
     // // film->display();
     // // film->play();
 
@@ -60,9 +60,9 @@ int main() {
     // int* chapters = new int[3]{10, 20, 30}; // Example chapter durations
 
     // // Create multimedia objects
-    // Photo* photo1 = new Photo("Photo1", "chess.jpg", 40.7128, 74.0060);
-    // Video* video1 = new Video("Video1", "videonochess.mkv", 60);
-    // Film* film1 = new Film("Film1", "videonochess.mkv", 60, chapters, 3);
+    // Photo* photo1 = new Photo("Photo1", "Photo.jpg", 40.7128, 74.0060);
+    // Video* video1 = new Video("Video1", "Video.mp4", 60);
+    // Film* film1 = new Film("Film1", "Video.mp4", 60, chapters, 3);
 
     // // Create groups
     // Group<Photo> GroupP("Photo Group");
@@ -126,9 +126,9 @@ int main() {
     // chapters[2] = 30;
 
     // // Create multimedia objects
-    // auto photo1 = std::make_shared<Photo>("Photo1", "chess.jpg", 40.7128, 74.0060);
-    // auto video1 = std::make_shared<Video>("Video1", "videonochess.mkv", 60);
-    // auto film1 = std::make_shared<Film>("Film1", "videonochess.mkv", 60, chapters.get(), 3);
+    // auto photo1 = std::make_shared<Photo>("Photo1", "Photo.jpg", 40.7128, 74.0060);
+    // auto video1 = std::make_shared<Video>("Video1", "Video.mp4", 60);
+    // auto film1 = std::make_shared<Film>("Film1", "Video.mp4", 60, chapters.get(), 3);
 
     // // Create groups
     // auto GroupP = std::make_shared<Group<Photo>>("Photo Group");
@@ -181,10 +181,10 @@ int main() {
 
     int* chapters = new int[3]{10, 20, 30};
 
-    auto photo1 = manager.createPhoto("Photo1", "chess.jpg", 1.0, 1.0);
-    auto photo2 = manager.createPhoto("Photo2", "chess.jpg", 2.0, 2.0);
-    auto video = manager.createVideo("Video", "videonochess.mkv", 120);
-    auto film = manager.createFilm("Film", "videonochess.mkv", 120, chapters, 3);
+    auto photo1 = manager.createPhoto("Photo1", "Photo.jpg", 1.0, 1.0);
+    auto photo2 = manager.createPhoto("Photo2", "Photo.jpg", 2.0, 2.0);
+    auto video = manager.createVideo("Video", "Video.mp4", 120);
+    auto film = manager.createFilm("Film", "Video.mp4", 120, chapters, 3);
 
     auto group1 = manager.createGroup("Group 1");
     group1->push_back(photo1);
