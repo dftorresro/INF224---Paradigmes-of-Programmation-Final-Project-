@@ -1,0 +1,79 @@
+\doxysection{Client Class Reference}
+\hypertarget{class_client}{}\label{class_client}\index{Client@{Client}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_client_a163113b9c3fda23dcdc750db9278afbe}{Client}} (String host, int port)  throws Unknown\+Host\+Exception, IOException 
+\item 
+String \mbox{\hyperlink{class_client_ab26831c395da92b5893066f9ce7963a4}{send}} (String request)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_client_ac9fec818083d641b633a8e4a75d981a7}{main}} (String argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_client}{Client} class for communicating with the C++ Server. This class establishes a connection with the server, sends requests, and receives responses. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_client_a163113b9c3fda23dcdc750db9278afbe}\label{class_client_a163113b9c3fda23dcdc750db9278afbe} 
+\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily Client.\+Client (\begin{DoxyParamCaption}\item[{String}]{host,  }\item[{int}]{port }\end{DoxyParamCaption}) throws Unknown\+Host\+Exception, IOException\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializes the connection with the server. Throws an exception in case of an error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & The host address. \\
+\hline
+{\em port} & The port number. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unknown\+Host\+Exception} & If the host is unknown. \\
+\hline
+{\em IOException} & If there is an I/O error. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_client_ac9fec818083d641b633a8e4a75d981a7}\label{class_client_ac9fec818083d641b633a8e4a75d981a7} 
+\index{Client@{Client}!main@{main}}
+\index{main@{main}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void Client.\+main (\begin{DoxyParamCaption}\item[{String}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Reads a request from the Terminal, sends the request to the server, retrieves the response, and displays it on the Terminal. Note that the program blocks if the server does not respond.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argv} & The command line arguments. The first argument is the host, and the second argument is the port. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_client_ab26831c395da92b5893066f9ce7963a4}\label{class_client_ab26831c395da92b5893066f9ce7963a4} 
+\index{Client@{Client}!send@{send}}
+\index{send@{send}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily String Client.\+send (\begin{DoxyParamCaption}\item[{String}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sends a request to the server and returns its response. Note that the method blocks if the server does not respond.
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to send to the server. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The response received from the server. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+swing/Client.\+java\end{DoxyCompactItemize}

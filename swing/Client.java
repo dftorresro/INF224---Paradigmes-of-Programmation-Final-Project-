@@ -6,6 +6,10 @@
 import java.io.*;
 import java.net.*;
 
+/**
+ * Client class for communicating with the C++ Server.
+ * This class establishes a connection with the server, sends requests, and receives responses.
+ */
 public class Client
 {
   private static final long serialVersionUID = 1L;
@@ -17,11 +21,13 @@ public class Client
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   
-  ///
-  /// Lit une requete depuis le Terminal, envoie cette requete au serveur,
-  /// recupere sa reponse et l'affiche sur le Terminal.
-  /// Noter que le programme bloque si le serveur ne repond pas.
-  ///
+  /**
+   * Reads a request from the Terminal, sends the request to the server,
+   * retrieves the response, and displays it on the Terminal.
+   * Note that the program blocks if the server does not respond.
+   * 
+   * @param argv The command line arguments. The first argument is the host, and the second argument is the port.
+   */
   public static void main(String argv[]) {
     String host = DEFAULT_HOST;
     int port = DEFAULT_PORT;
@@ -59,10 +65,15 @@ public class Client
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  ///
-  /// Initialise la connexion.
-  /// Renvoie une exception en cas d'erreur.
-  ///
+  /**
+   * Initializes the connection with the server.
+   * Throws an exception in case of an error.
+   * 
+   * @param host The host address.
+   * @param port The port number.
+   * @throws UnknownHostException If the host is unknown.
+   * @throws IOException If there is an I/O error.
+   */
   public Client(String host, int port) throws UnknownHostException, IOException {
     try {
       sock = new java.net.Socket(host, port);
@@ -88,10 +99,13 @@ public class Client
   
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   
-  ///
-  /// Envoie une requete au server et retourne sa reponse.
-  /// Noter que la methode bloque si le serveur ne repond pas.
-  ///
+  /**
+   * Sends a request to the server and returns its response.
+   * Note that the method blocks if the server does not respond.
+   * 
+   * @param request The request to send to the server.
+   * @return The response received from the server.
+   */
   public String send(String request) {
     // Envoyer la requete au serveur
     try {

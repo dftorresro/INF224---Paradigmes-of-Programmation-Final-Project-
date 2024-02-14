@@ -1,3 +1,8 @@
+/**
+ * @brief Constructor for the Group class.
+ * 
+ * @param name The name of the group.
+ */
 template <typename T>
 Group<T>::Group(const std::string& name) : name(name) {}
 

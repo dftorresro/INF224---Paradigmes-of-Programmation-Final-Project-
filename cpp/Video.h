@@ -19,7 +19,7 @@ private:
 public:
 
     /**
-     * Constructor.
+     * @brief Constructor.
      * @param name Name of the video.
      * @param filePath File path of the video.
      * @param duration Duration of the video in seconds.
@@ -27,29 +27,31 @@ public:
     Video(const string& name, const string& filePath, long duration);
 
     /**
-     * Copy constructor.
+     * @brief Copy constructor.
      * @param other The video to copy.
      */
     Video(const Video& other);
 
     /**
+     * @brief Get the duration of the video.
      * @return The duration of the video in seconds.
      */
     double getDuration() const;
 
     /**
-     * Set the duration of the video.
+     * @brief Set the duration of the video.
      * @param duration The new duration in seconds.
      */
     void setDuration(long newduration);
 
     /**
-     * Display the video using the parameter "duration".
+     * @brief Display the video.
+     * @return A string representation of the video.
      */
     std::string display() const override;
        
     /**
-     * Play the video.
+     * @brief Play the video.
      */
     void play() const override;
 

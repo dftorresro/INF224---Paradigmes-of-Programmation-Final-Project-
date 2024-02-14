@@ -1,3 +1,13 @@
+/**
+ * @file MainFrame.java
+ * @brief This file contains the MainFrame class which is a part of the swing package.
+ * 
+ * The swing package provides a set of GUI components for creating graphical user interfaces.
+ * The MainFrame class is a top-level container that represents the main window of an application.
+ * It extends the JFrame class from the javax.swing package.
+ * 
+ * @see javax.swing.JFrame
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

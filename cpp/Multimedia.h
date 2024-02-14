@@ -16,6 +16,8 @@ using namespace std; // Using the std namespace to avoid having to write "std::"
  * @class Multimedia
  * @brief A class for storing multimedia object information.
  *
+ * This class represents a multimedia object, which can be any type of media such as an image, audio, or video file.
+ * It stores the name and file path of the multimedia object.
  */
 class Multimedia {
 private:
@@ -68,6 +70,7 @@ public:
 
     /**
      * @brief Display the multimedia object information.
+     * @return A string containing the multimedia object information.
      */
     virtual std::string display() const;
 

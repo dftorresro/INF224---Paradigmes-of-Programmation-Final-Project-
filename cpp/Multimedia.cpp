@@ -10,7 +10,15 @@
 using namespace std; // Using the std namespace to avoid having to write "std::" before standard library types and functions.
 
 /**
- * Constructor.
+ * @class Multimedia
+ * @brief Represents a multimedia object.
+ *
+ * The Multimedia class provides functionality to create and manipulate multimedia objects.
+ * It stores the name and file path of the multimedia object, and provides methods to access and display this information.
+ */
+
+/**
+ * @brief Constructor.
  * @param name Name of the multimedia object.
  * @param filePath File path of the multimedia object.
  */
@@ -18,31 +26,32 @@ Multimedia::Multimedia(const std::string& name, const std::string& filePath)
     : name(name), filePath(filePath) {}
 
 /**
- * Copy constructor.
+ * @brief Copy constructor.
  * @param other The multimedia object to copy.
  */
 Multimedia::Multimedia(const Multimedia& other) 
     : name(other.name), filePath(other.filePath) {}
 
 /**
- * Destructor.
+ * @brief Destructor.
  */
 Multimedia::~Multimedia() {}
 
 /**
- * Getter for name.
+ * @brief Getter for name.
  * @return The name of the multimedia object.
  */
 string Multimedia::getName() const {return name;}
 
 /**
- * Getter for file path.
+ * @brief Getter for file path.
  * @return The file path of the multimedia object.
  */
 string Multimedia::getFilePath() const {return filePath;}
 
 /**
- * Display the multimedia object.
+ * @brief Display the multimedia object.
+ * @return A string representation of the multimedia object.
  */
 std::string Multimedia::display() const {
     std::string info = "Name: " + name + ", File Path: " + filePath;
@@ -50,7 +59,7 @@ std::string Multimedia::display() const {
 }
 
 /**
- * Play the multimedia object.
+ * @brief Play the multimedia object.
  */
 void Multimedia::play() const {
     cout << "Playing " << filePath << std::endl;
