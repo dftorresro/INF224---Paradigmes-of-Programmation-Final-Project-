@@ -69,17 +69,17 @@ public class MainFrame extends JFrame {
         toolBar.addSeparator();
 
         toolBar.add(searchAction);
+        toolBar.add(playAction);
         toolBar.add(createPhotoAction);
         toolBar.add(createVideoAction);
         toolBar.add(helpAction);
-        toolBar.add(playAction);
         toolBar.add(exitAction);
 
         menu.add(searchAction);
+        menu.add(playAction);
         menu.add(createPhotoAction);
         menu.add(createVideoAction);
         menu.add(helpAction);
-        menu.add(playAction);
         menu.add(exitAction);
 
         // Add menu to menu bar
@@ -99,7 +99,8 @@ public class MainFrame extends JFrame {
     }
 
     private void displayHelp() {
-        JOptionPane.showMessageDialog(this, "Available Commands:\n" +
+        JOptionPane.showMessageDialog(this, "Filenames to test : Photo.h Video.h\n"+
+                "Available Commands ------------------------------------------------\n" +
                 "CREATE_PHOTO <name> <pathname> <latitude> <longitude> - Create a new photo object.\n" +
                 "CREATE_VIDEO <name> <pathname> <duration> - Create a new video object.\n" +
                 "SEARCH <name> - Search for a multimedia object by name and display its details.\n" +
