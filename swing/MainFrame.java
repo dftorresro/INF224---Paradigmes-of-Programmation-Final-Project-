@@ -109,7 +109,7 @@ public class MainFrame extends JFrame {
     }
 
     private void displayHelp() {
-        JOptionPane.showMessageDialog(this, "Filenames to test : Photo.h Video.h\n"+
+        JOptionPane.showMessageDialog(this, "Filenames to test : Photo.jpg Video.mp4\n"+
                 "Available Commands ------------------------------------------------\n" +
                 "CREATE_PHOTO <name> <pathname> <latitude> <longitude> - Create a new photo object.\n" +
                 "CREATE_VIDEO <name> <pathname> <duration> - Create a new video object.\n" +
