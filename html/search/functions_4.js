@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7emultimedia_0',['~Multimedia',['../class_multimedia.html#ab280f9ce1d0a1291c9b1ab876e854c94',1,'Multimedia']]]
+  ['film_0',['film',['../class_film.html#aa4f2ae16c8a839bb661ba4bf36c2a5c1',1,'Film::Film(const std::string &amp;name, const std::string &amp;filename, int duration, const int *chapterDurations, int numberOfChapters)'],['../class_film.html#a71002f3f02dd2e03d9059bfc86c17118',1,'Film::Film(const Film &amp;other)']]]
 ];

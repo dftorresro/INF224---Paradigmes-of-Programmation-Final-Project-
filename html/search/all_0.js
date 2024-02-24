@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['display_0',['display',['../class_multimedia.html#acc0ac0f04fd67622cff94bf883ec4c82',1,'Multimedia']]]
+  ['accept_0',['accept',['../class_server_socket.html#accc3d56d42aa50a5f3c920cf0b26959b',1,'ServerSocket']]]
 ];
